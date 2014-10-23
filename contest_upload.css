@@ -1,0 +1,262 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Apple SD Gothic Neo", "AppleSDGothicNeo-Light", "Dotum"; }
+
+html, body, div, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; }
+
+html, body {
+  overflow-x: hidden; }
+
+input, textarea {
+  width: 100%; }
+
+.clear:after {
+  content: "";
+  display: bloc;
+  clear: both; }
+
+ul, li {
+  padding: 0;
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+img {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+hr {
+  display: none; }
+
+.blind {
+  display: none !important; }
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.invisible {
+  position: absolute;
+  top: -9999em !important;
+  left: -9999em !important; }
+
+.btn-dialogue-init, .layerDialogue .btnComfirm, .layerDialogue .btnSelect {
+  line-height: 45px;
+  text-align: center;
+  border-top: 1px solid #dddddd;
+  font-size: 14px; }
+
+.layerDialogue {
+  width: 280px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  margin-left: -140px;
+  z-index: 999; }
+  .layerDialogue .message {
+    margin: 40px 15px;
+    text-align: center; }
+  .layerDialogue .btnComfirm {
+    cursor: pointer; }
+  .layerDialogue .btnSelect .btnCancel {
+    width: 49.4%;
+    border-right: 1px solid #dddddd;
+    color: #333333;
+    float: left;
+    cursor: pointer; }
+  .layerDialogue .btnSelect .btnApply {
+    width: 49.4%;
+    color: #4b91e9;
+    float: left;
+    cursor: pointer; }
+
+.dimmedBg {
+  width: 100%;
+  background: black;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+#upload-wrp {
+  padding: 30px 10px; }
+
+.subject-wrp .subject-tit {
+  overflow: hidden; }
+.subject-wrp .tit {
+  font-size: 14px;
+  color: #333333;
+  text-align: left;
+  float: left;
+  display: block;
+  margin-bottom: 10px; }
+.subject-wrp .count {
+  float: right;
+  display: block;
+  color: #acb0b4; }
+  .subject-wrp .count .current-count {
+    color: #4b91e9; }
+.subject-wrp .input-box {
+  color: #acb0b4;
+  font-size: 14px;
+  height: 45px;
+  background: #f8f8f8;
+  border: 1px solid #eeeeee; }
+
+.photo-wrp {
+  margin-top: 30px; }
+  .photo-wrp .photo-tit {
+    overflow: hidden; }
+  .photo-wrp .tit {
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    float: left;
+    display: block;
+    margin-bottom: 10px; }
+  .photo-wrp .count {
+    float: right;
+    display: block;
+    color: #acb0b4; }
+    .photo-wrp .count .current-count {
+      color: #4b91e9; }
+  .photo-wrp .btn-upload {
+    font-weight: bold;
+    display: block;
+    line-height: 46px;
+    font-size: 14px;
+    color: white;
+    background: #4b91e9;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer; }
+
+.description-wrp {
+  margin-top: 30px; }
+  .description-wrp .description-tit {
+    overflow: hidden; }
+  .description-wrp .tit {
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    float: left;
+    display: block;
+    margin-bottom: 10px; }
+  .description-wrp .count {
+    float: right;
+    display: block;
+    color: #acb0b4; }
+    .description-wrp .count .current-count {
+      color: #4b91e9; }
+  .description-wrp .text-area {
+    width: 96%;
+    padding: 2%;
+    color: #acb0b4;
+    font-size: 14px;
+    background: #f8f8f8;
+    border: 1px solid #eeeeee; }
+
+.category-wrp {
+  margin-top: 30px; }
+  .category-wrp .category-tit {
+    overflow: hidden; }
+  .category-wrp .tit {
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    display: block;
+    margin-bottom: 10px; }
+  .category-wrp .select-wrp {
+    display: block;
+    overflow: hidden; }
+    .category-wrp .select-wrp span {
+      width: 33.33%;
+      line-height: 45px;
+      display: block;
+      overflow: hidden;
+      float: left; }
+    .category-wrp .select-wrp .select-btn {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      color: #acb0b4;
+      cursor: pointer;
+      background: #f8f8f8;
+      border: 1px solid #eeeeee; }
+    .category-wrp .select-wrp .on {
+      background: #4b91e9;
+      border: 1px solid #4b91e9;
+      color: white; }
+    .category-wrp .select-wrp .btn02 {
+      margin-left: 2px; }
+    .category-wrp .select-wrp .btn03 {
+      margin-left: 2px; }
+
+.apply-wrp {
+  margin-top: 30px; }
+  .apply-wrp .apply-tit {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    color: #acb0b4;
+    margin-bottom: 10px; }
+  .apply-wrp .btn-submit {
+    display: block;
+    font-size: 14px;
+    line-height: 46px;
+    color: white;
+    font-weight: bold;
+    background: #4b91e9;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer; }
+
+.Please-note {
+  margin-top: 30px; }
+  .Please-note .tit {
+    display: block;
+    color: #333333;
+    font-size: 13px;
+    font-weight: bold; }
+  .Please-note .info {
+    margin-top: 10px;
+    display: block;
+    font-size: 12px;
+    color: #acb0b4;
+    line-height: 16px; }
+
+.upload_btn {
+  display: block;
+  text-decoration: none;
+  color: yellow;
+  text-align: center;
+  background: red;
+  line-height: 40px;
+  cursor: pointer; }
+
+.upload-remove-btn {
+  width: 26px;
+  display: block;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  cursor: pointer; }
+
+.fileList {
+  position: relative;
+  margin-bottom: 15px; }

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="contest_upload.css">
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="upload-wrp">
+
+	<form action="#" method="post" enctype="multipart/form-data" name="myApplication" id="myApplication">
+		<div class="subject-wrp">
+			<div class="subject-tit clear">
+				<h3 class="tit">제목을 입력해 주세요.</h3>
+				<span class="count">
+					<span class="current-count">0</span>/12
+				</span>
+			</div>
+			<input type="text" name="title" class="input-box" maxlength="12" value="" placeholder=" 짧고도 매력적인 제목이 유리해요." style="width:96%;padding:0 2%"/>
+		</div>
+		
+		<div class="photo-wrp">
+			<div class="photo-tit clear">
+				<h3 class="tit">카톡대화 사진을 첨부해 주세요.</h3>
+			</div>
+			
+			<!-- upload list -->
+			<div id="Fwrp_0" class="file-wrp">
+				<div id="fileList_0" class="fileList">
+					<img src="btn_upload_remove.gif" alt="closeBnt_0" class="upload-remove-btn invisible" onclick="obj.removeImage(this)" />
+				</div>
+				<input type="file" id="fileElem_0" class="invisible imageUploader" name="talkImage" accept="image/*" onchange="obj.handleFiles(this)" />
+			</div>
+			<div id="Fwrp_1" class="file-wrp">
+				<div id="fileList_1" class="fileList">
+					<img src="btn_upload_remove.gif" alt="closeBnt_1" class="upload-remove-btn invisible" onclick="obj.removeImage(this)" />
+				</div>
+				<input type="file" id="fileElem_1" class="invisible imageUploader" name="talkImage" accept="image/*" onchange="obj.handleFiles(this)" />
+			</div>
+			<div id="Fwrp_2" class="file-wrp">
+				<div id="fileList_2" class="fileList">
+					<img src="btn_upload_remove.gif" alt="closeBnt_2" class="upload-remove-btn invisible" onclick="obj.removeImage(this)" />
+				</div>
+				<input type="file" id="fileElem_2" class="invisible imageUploader" name="talkImage" accept="image/*" onchange="obj.handleFiles(this)" />
+			</div>
+			<div id="Fwrp_3" class="file-wrp">
+				<div id="fileList_3" class="fileList">
+					<img src="btn_upload_remove.gif" alt="closeBnt_3" class="upload-remove-btn invisible" onclick="obj.removeImage(this)" />
+				</div>
+				<input type="file" id="fileElem_3" class="invisible imageUploader" name="talkImage" accept="image/*" onchange="obj.handleFiles(this)" />
+			</div>
+			<div id="Fwrp_4" class="file-wrp">
+				<div id="fileList_4" class="fileList">
+					<img src="btn_upload_remove.gif" alt="closeBnt_4" class="upload-remove-btn invisible" onclick="obj.removeImage(this)" />
+				</div>
+				<input type="file" id="fileElem_4" class="invisible imageUploader" name="talkImage" accept="image/*" onchange="obj.handleFiles(this)" />
+			</div>
+			<!-- // upload list -->
+
+
+			<span id="btn-upload" class="btn-upload">
+				사진 첨부하기 (최대 5장)
+			</span>
+		</div>
+		<div class="description-wrp">
+			<div class="description-tit clear">
+				<h3 class="tit">간단한 설명을 입력해 주세요.(선택)</h3>
+				<span class="count">
+					<span class="current-count">0</span>/30
+				</span>
+			</div>
+			<textarea name="description" class="text-area" cols="30" rows="3"  maxlength="30" placeholder="상황을 재미있게 설명하시면 추천, 공유의 가능성이 높아질 거에요." style="width:96%;padding:2%"></textarea>
+		</div>
+		
+		<div class="category-wrp">
+			<div class="category-tit clear">
+				<h3 class="tit">어떤 내용인가요?</h3>
+			</div>
+			<!-- 수정될 부분!! -->
+			<span class="select-wrp clear">
+				<span>
+					<label class="select-btn btn01 on" for="btn01">웃음<input type="radio" name="category" id="btn01" class="blind" value="웃음" checked="checked"/></label>
+				</span>
+				<span>
+					<label class="select-btn btn02" for="btn02">감동<input type="radio" name="category" id="btn02" class="blind" value="감동" /></label>
+				</span>
+				<span>
+					<label class="select-btn btn03" for="btn03">기타<input type="radio" name="category" id="btn03" class="blind" value="기타" /></label>
+				</span>
+			</span>
+		</div>
+		<div class="apply-wrp">
+			<span class="apply-tit">* 응모 후에는 수정 및 철회가 불가합니다.</span>
+			<span class="btn-submit">응모 시 유의점 동의 후 응모하기</span>
+		</div>
+		
+		<div class="Please-note">
+			<span class="tit">[응모시 유의사항]</span>
+			<span class="info">
+				1) 응모된 콘텐츠 및 수상작에 대한 저작권은 응모자에게 있으며,다만 카카오는 응모된 콘텐츠의 내용을 공개하고 수상작을 카카오페이지를 통해 서비스할 권리를 갖습니다. 수상작은 무료로 서비스 될 예정이며 카카오는 수상자에게 콘텐츠 사용대가를 별도로 지급하지 않습니다.<br /><br />
+				2) 응모하는 내용은 본인이 참여한 대화내용 또는 직접 창작한 내용임을 원칙으로 하되, 대화 상대방이 있는 경우 그 상대방으로부터 응모에 관한 동의를 받아야 합니다. 만일 타인 간의 대화내용이거나 타인이 창작한 내용인 경우에는 그 타인(들)으로부터 응모에 관한 동의를 받아야 합니다.<br /><br />
+				3) 응모작 공개시 응모자의 카카오페이지 닉네임이 함께 공개됩니다.<br /><br />
+				4) 음란하거나 청소년에게 유해한 내용, 사회적 물의를 일으킬 수 있는 내용이 포함된 응모작은 접수가 거절될 수 있으며, 응모작 리스트에서 별도 고지 없이 삭제될 수 있습니다.<br /><br />
+			</span>
+		</div>
+	</form>
+</div>
+
+
+<div class="layerDialogue invisible">
+	<div class="message"></div>
+	<div class="btnComfirm invisible">확인</div>
+	<div class="btnSelect invisible clear">
+		<div class="btnCancel">취소</div>
+		<div class="btnApply">응모하기</div>
+	</div>		
+</div>
+<div class="dimmedBg blind"></div>
+
+<div style="position:fixed;width:100%;bottom:0;left:0;background:#fff;border:1px solid #f00" class="console"></div>
+
+
+<script type="text/javascript">
+
+	var
+	current_count = $('.current-count'),
+	input_box = $(".input-box"),
+	text_area = $(".text-area"),
+	inputStr = input_box.val(),
+	textAreaStr = text_area.val(),
+	inputStrLimit = input_box.attr("maxLength"),
+	dimmedBg = $(".dimmedBg"),
+	textAreaStrLimit = text_area.attr("maxLength"),
+	isPreventDuplicated = false;
+	
+	var update = function(_this) {
+		var class_name = _this.attr('class');
+		if(class_name == 'input-box') {
+			if(_this.val() == inputStr)
+				_this.val("");	
+			
+			var subject_count = $('.subject-tit').find('.current-count');
+			subject_count.html(_this.val().length);
+		} else if(class_name == 'text-area') {
+			if(_this.val() == textAreaStr)
+				_this.val("");	
+			
+			var description_count = $('.description-tit').find('.current-count');
+			description_count.html(_this.val().length);	
+		}
+	};
+
+	input_box.on("input keyup paste mousedown", function() {
+		update($(this));
+	});
+	text_area.on("input keyup paste mousedown", function() {
+		var _this = $(this);
+		update(_this);
+		_this.focus();
+	});
+	
+	$(".dimmedBg").css("height", getDocHeight());
+	
+	
+	
+	// Handling radio button
+	var select_btn = $('.select-btn');
+	select_btn.bind("mousedown", function () {
+		var _this = $(this); 
+		_this.children("input").attr("checked", true);
+		select_btn.removeClass("on");
+		_this.addClass("on");
+	});
+	
+
+	var btnSubmit = $(".btn-submit");
+	var imageUploader = $(".imageUploader");
+	
+	
+	btnSubmit.bind("mousedown", function () {
+		var file_check = $('#apply_img');
+		
+		if(input_box.val().trim() == "") {
+			layerPopDialogue("제목을 입력해주세요.", null);
+			input_box.val("");
+			return;
+		}
+		
+		if(document.myApplication.talkImage[0].value == "" ) {
+			layerPopDialogue("사진을 첨부해주세요.", null);
+			return;
+		}
+		
+		if(!isPreventDuplicated){
+			layerPopDialogue("응모 후에는 수정 및 철회가 불가합니다. 다시 한 번 꼼꼼하게 확인해 주세요.", "submit");
+			if(text_area.val().trim() == "")
+				text_area.val("");
+		}else{
+			layerPopDialogue("중복제출은 불가합니다. 잠시만 기다리세요.", null);
+		}
+	});
+	
+	
+
+	$('#myApplication').submit(function(ev) {
+	    ev.preventDefault();
+	});
+	
+
+	
+	var 
+	layerDialogue = $(".layerDialogue"),
+	message = $(".message"),
+	btnComfirm = $(".btnComfirm"),
+	btnCancel = $(".btnCancel"),
+	btnApply = $(".btnApply"),
+	btnSelect = $(".btnSelect");
+	
+	// type : null or something
+	function layerPopDialogue(msg, type){
+		message.text(msg);
+		
+		if(type == null){
+			btnComfirm.removeClass("invisible");
+		}else{
+			btnSelect.removeClass("invisible");
+		}
+		
+		freezeTouch();
+		
+		$(".layerDialogue").css("top", getElementCenter());		
+		layerDialogue.removeClass("invisible");
+		dimmedBg.css("height", getDocHeight());
+		dimmedBg.removeClass("blind");
+		$('body').css({'overflow-y': 'hidden'});
+	
+		btnCancel.bind("mousedown", function () {
+			meltTouch();
+			btnSelect.addClass("invisible");
+			btnComfirm.addClass("invisible");
+			layerDialogue.addClass("invisible");
+			dimmedBg.addClass("blind");
+		});
+		
+		btnComfirm.bind("mousedown", function () {
+			meltTouch();
+			btnSelect.addClass("invisible");
+			btnComfirm.addClass("invisible");
+			layerDialogue.addClass("invisible");
+			dimmedBg.addClass("blind");
+		});
+		
+		btnApply.bind("mousedown", function () {
+			if(!isPreventDuplicated){
+				isPreventDuplicated = true;
+				document.myApplication.submit();
+			}
+		});
+	}
+
+	function getElementCenter() {
+		return getWinHeight()/2 -  getElementHeight()/2 + getScrollTop();
+	}
+	
+	function getDocHeight() {
+		return $(document).height();
+	}
+	
+	function getWinHeight() {
+		return $(window).height();
+	}
+	
+	function getScrollTop() {
+		return $(document).scrollTop();
+	}
+	
+	function getElementHeight() {
+		return $(".layerDialogue").height();
+	}
+	
+	function freezeTouch() {
+		document.addEventListener("touchmove", onTouchPreventDefault, false);
+	}
+	
+	function meltTouch() {
+		document.removeEventListener("touchmove", onTouchPreventDefault, false);
+	}
+	
+	function onTouchPreventDefault(event){ 
+		event.preventDefault(); 
+	}
+</script>
+
+<script src="uploader.js"></script>
+
+</body>
+</html>
